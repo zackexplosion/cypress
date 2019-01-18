@@ -1227,6 +1227,9 @@ describe "src/cy/commands/navigation", ->
       }, {
         contentType: 'text/html; charset=utf-8,text/html',
         pathName: 'invalid-content-type'
+      }, {
+        contentType: 'text/html; charset=utf-8,text/html',
+        pathName: 'invalid-content-type-in-html'
       }]
       .forEach ({contentType, pathName}) ->
         it "displays loading_invalid_content_type when content type is #{contentType} on http requests", (done) ->

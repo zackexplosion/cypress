@@ -72,6 +72,9 @@ niv.install("react-dom@15.6.1")
     res.setHeader('Content-Type', 'text/html; charset=utf-8,text/html')
     res.end("<html><head><title>Test</title></head><body><center>Hello</center></body></html>")
 
+  app.get '/invalid-content-type-in-html', (req, res) ->
+    res.end('<html><head><title>Test</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8,text/html"/></head><body><center>Hello</center></body></html>')
+
   app.get "/status-404", (req, res) ->
     res
     .status(404)
